@@ -36,6 +36,7 @@ func main() {
   for _, number := range numbers {
     sum += number
   }
-  fmt.Printf("Average is: %0.2f\n", sum/float64(len(numbers)))
+  average := sum/float64(len(numbers))
+  fmt.Printf("Average is: %0.2f\n", average)
 }
   
