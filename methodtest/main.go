@@ -4,6 +4,10 @@ import "fmt"
 
 type Number int
 
+func (n *Number) Double() {
+    *n *= 2
+}
+
 func (n Number) Add(otherNumber int) {
     fmt.Println(n, "plus", otherNumber, "is", int(n)+otherNumber)
 }
@@ -19,4 +23,8 @@ func main() {
     four := Number(4)
     four.Add(3)
     four.Subtract(2)
+    number := Number(4)
+    fmt.Println("Original value of number:", number)
+    number.Double()
+    fmt.Println("number after calling the Double() method", number)
 }
